@@ -55,6 +55,10 @@ canvas {
     align-items: flex-end;
     gap: 0.25rem;
     font-size: 1rem;
+    padding: 0.75rem 1rem;
+}
+#links:hover {
+    background-color: black;
 }
 #links a {
     color: white;
