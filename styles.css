@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+#guidelines{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#guidelines.show {
+    opacity: 1;
+}
+#guidelines div {
+    width: 50dvw;
+    height: 50dvh;
+    border: 1px solid red;
+    color: white;
+}
+canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+}
