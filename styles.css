@@ -45,3 +45,67 @@ canvas {
     top: 0;
     left: 0;
 }
+#links{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+    font-size: 1rem;
+}
+#links a {
+    color: white;
+}
+#moreInfo{
+    color: white;
+}
+
+#moreInfo{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.25rem;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.moreInfoText {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#infoIcon {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 1rem;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+.moreInfoText {
+    position: relative;
+    background-color: black;
+    opacity: 0;
+}
+
+#infoIcon:hover {
+    color: black;
+    border-color: black;
+}
+
+#infoIcon:hover ~  .moreInfoText {
+    opacity: 1;
+}

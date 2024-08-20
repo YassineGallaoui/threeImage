@@ -1,4 +1,4 @@
-import { GUI } from 'dat.gui'; // Import dat.GUI
+import { GUI } from 'dat.gui';
 import * as THREE from 'three';
 import WebGL from 'three/addons/capabilities/WebGL.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -110,11 +110,6 @@ const addEventListeners = () => {
 }
 
 const initGUI = () => {
-    const guiOptions = {
-        showGuidelines: true
-    };
-
-
     const gui = new GUI();
     images.forEach((img, index) => {
         const folder = gui.addFolder(`Image ${index + 1}`);
@@ -125,12 +120,6 @@ const initGUI = () => {
         folder.add(img, 'moveOnClick').name('MoveOnClick');
         folder.add(img, 'strength', 0, 0.1).name('Distortion Strength');
         folder.add(img, 'lerpFactor', 0.01, 0.2).name('Lerp Factor');
-        folder.add(img, 'showWireframe').name('Wireframe').onChange(() =>
-            img.toggleWireframe()
-        );
-        folder.add(guiOptions, 'showGuidelines').name('Guidelines').onChange(()=>{
-            toggleGuidelines()
-        });
         folder.open();
     });
 }
