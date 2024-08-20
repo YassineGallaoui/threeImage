@@ -93,17 +93,12 @@ canvas {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+    background-color: black;
 }
 .moreInfoText {
     position: relative;
     background-color: black;
     opacity: 0;
-}
-
-#infoIcon:hover {
-    color: black;
-    border-color: black;
 }
 
 #infoIcon:hover ~  .moreInfoText {
